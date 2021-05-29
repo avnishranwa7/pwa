@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import SignUp from './pages/SignUp/signup';
 import './App.css';
+import Home from './pages/Homepage/Homepage';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import PhoneSignIn from './pages/verify/verifyMobile';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='signin'>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/signup/step2' component={SignUp} />
+          <Route path='/signup/step1' component={PhoneSignIn} />
+          <Redirect to="/"/>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

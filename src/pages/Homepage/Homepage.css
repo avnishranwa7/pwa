@@ -1,0 +1,13 @@
+.start{
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.button2{
+    margin-left: 1vw;
+}
